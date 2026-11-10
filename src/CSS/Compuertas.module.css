@@ -1,0 +1,241 @@
+/* 1. ESTILOS GENERALES Y COMPONENTES BASE */
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* .btn-regresarMenu {
+  
+  cursor: pointer;
+  padding: 14px 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  min-width: 200px;
+  font-size: 1rem;
+  justify-content: center;
+  background-color: #2563eb;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+} */
+.btn-regresarMenu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0,0.1);
+  min-width: 200px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #2563eb;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+  z-index: 100;
+}
+.btn-regresarMenu:hover{
+  transform: translateY(-2px);
+  background-color: #1d4ed8;
+  color: white;
+  text-decoration: none;
+  
+}
+
+/* Fija el contenedor en la parte inferior izquierda */
+.contenedor-tabla {
+  position: fixed; 
+  bottom: 40px;
+  left: 40px;
+  font-family: sans-serif;
+}
+
+.titulo-tabla {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.tabla-verdad {
+  background-color: #1e2633; 
+  color: white;
+  border-radius: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 15px 5px;
+}
+
+.tabla-verdad tbody tr{
+  transition: all 0.3s ease;
+}
+
+.fila-activa {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* 2. DIAGRAMA */
+.diagrama-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto 40px auto;
+  gap: 0;
+}
+
+.columna-entradas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px;
+  padding-right: 5px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 50px;
+}
+
+.label-flotante{
+  position: absolute;
+  top: -25px;
+  color: white;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.columna-centro{
+  display: flex;
+  align-items: center;
+  height: 160px;
+}
+
+.linea-conector{
+  stroke: white;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.texto-conector{
+  fill: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.compuerta-caja{
+  background-color: #2563eb;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 25px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+
+.columna-resultado{
+  position: relative;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  padding-left: 5px;
+}
+
+.label-flotante-resultado{
+  position: absolute;
+  top: 35px;
+  color: white;
+  font-size: 14px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.btn-red, .btn-green {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-red { background-color: #ff0000; }
+.btn-green { background-color: #00ff00; }
+
+.columna-resultado .btn-red,
+.columna-resultado .btn-green {
+  width: 60px;
+  height: 45px;
+  cursor: default;
+}
+
+/* 3. RESPONSIVE DESIGN (MÓVILES) - ¡Siempre hasta el final! */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+
+  .container h1 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+
+  .container p {
+    font-size: 0.9rem;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .diagrama-container {
+    transform: scale(0.75);
+    margin: 30px auto; 
+  }
+
+  .contenedor-tabla {
+    position: static; 
+    margin: 10px auto 30px auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .btn-regresarMenu {
+    position: static !important;
+    text-decoration: none;
+    display: block;
+    margin: 40px auto; 
+    width: 80%; 
+    max-width: 300px;
+  }
+}
