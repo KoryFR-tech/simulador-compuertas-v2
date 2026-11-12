@@ -2,3 +2,11 @@ body {
     background-color:#111827;
     margin: 0;
 }
+
+:root, body {
+    font-family: sans-serif;
+}
+
+button, input, select, label, textarea {
+    font-family: inherit;
+}
