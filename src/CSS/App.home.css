@@ -1,3 +1,6 @@
+h1, h2, p{
+    color:#F9FAFE;
+}
 /*style={{ textAlign: 'center', marginTop: '50px' }}*/
 .container-compuertas{
     text-align: center;
@@ -30,6 +33,10 @@
     background-color: #1d4ed8;
 }
 
-h1, h2, p{
-    color:#F9FAFE;
+.container-btnsInferiores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }

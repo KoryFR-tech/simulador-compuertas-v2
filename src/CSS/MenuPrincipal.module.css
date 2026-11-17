@@ -1,0 +1,83 @@
+.hubContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    color: #cccccc;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #cbd5e1;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.gridSimuladores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background-color: #1e2633;
+    border: 1px solid #334155;
+    border-radius: 13px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.2s ease, border-color 0.2 ease;
+}
+
+.card:hover:not(.cardDisabled) {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #f8fafc;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.cardDisabled {
+    opacity: 0.65;
+}
+
+.btnAbrir, .btnProximamente {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+.btnAbrir {
+    background-color: #2563eb;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btnAbrir:hover {
+    background-color: #1d4ed8;
+}
+
+.btnProximamente{
+    background-color: #475569;
+    cursor: not-allowed;
+}

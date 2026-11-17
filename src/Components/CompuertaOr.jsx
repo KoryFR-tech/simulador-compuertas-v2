@@ -101,7 +101,7 @@ export default function CompuertaOr(){
         </table>
       </div>
       {/* Botón/Enlace para regresar a la página principal */}
-      <Link to="/" className={styles['btn-regresarMenu']}>
+      <Link to="/compuertas" className={styles['btn-regresarMenu']}>
         {/* <button className={styles['btn-regresarMenu']}>Regresar al menú</button> */}
         Regresar al menú
       </Link>
